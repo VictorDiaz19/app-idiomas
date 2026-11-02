@@ -1,0 +1,25 @@
+# Normaliza saltos de línea: en el repositorio siempre LF,
+# en tu disco Git usa el formato de tu sistema operativo.
+* text=auto
+
+# Scripts que se ejecutan en Linux/macOS: siempre LF (si no, fallan)
+*.sh    text eol=lf
+gradlew text eol=lf
+mvnw    text eol=lf
+
+# Scripts de Windows: siempre CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binarios: Git no debe tocarlos
+*.jar      binary
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.webp     binary
+*.ico      binary
+*.ttf      binary
+*.otf      binary
+*.keystore binary
+*.jks      binary

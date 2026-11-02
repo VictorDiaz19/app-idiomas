@@ -1,0 +1,92 @@
+# =========================================================
+#  SECRETOS — lo más importante de este archivo
+# =========================================================
+.env
+.env.*
+*.env
+!.env.example
+!**/.env.example
+
+# Configuración local de Spring con credenciales
+**/src/main/resources/application-local.*
+**/src/main/resources/application-secret*.*
+
+# Llaves, certificados y firmas de Android
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+**/android/key.properties
+
+# Credenciales de servicios (p. ej. Firebase)
+**/google-services.json
+**/GoogleService-Info.plist
+
+# =========================================================
+#  Flutter / Dart
+# =========================================================
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+**/android/local.properties
+**/android/.gradle/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Pods/
+coverage/
+
+# =========================================================
+#  Java — Gradle
+# =========================================================
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# =========================================================
+#  Java — Maven
+# =========================================================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/.mvn/wrapper/maven-wrapper.jar
+
+# Compilados y logs
+*.class
+*.log
+hs_err_pid*
+
+# =========================================================
+#  IDEs
+# =========================================================
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VS Code (se comparten solo las extensiones recomendadas)
+.vscode/*
+!.vscode/extensions.json
+
+# =========================================================
+#  Sistema operativo
+# =========================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
