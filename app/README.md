@@ -3,11 +3,33 @@
 Aplicación móvil de App Idiomas.
 
 - **Stack:** Flutter (Dart) — Android primero
-- **Responsable:** ______
+- **Responsable:** Victor
 
 ## Estado
 
-Pendiente: el proyecto se generará con `flutter create` dentro de esta carpeta.
+Esqueleto listo (issue #1): navegación entre tres pantallas de marcador
+(Inicio, Video y Biblioteca) y tema Material 3. Todavía no hay reproductor,
+notas ni conexión con el backend.
+
+Dependencias principales: `flutter_riverpod` (estado) y `go_router` (navegación).
+
+### Estructura de `lib/`
+
+```
+lib/
+├── main.dart          Punto de entrada: envuelve la app en ProviderScope
+├── app.dart           Widget raíz: conecta tema y router
+├── core/
+│   ├── theme/         app_theme.dart: único archivo de colores y tema
+│   └── router/        Rutas (go_router) y marco con la barra inferior
+└── features/          Una carpeta por funcionalidad
+    ├── home/          Inicio
+    ├── video/         Reproductor (ruta /video/:videoId, sin barra inferior)
+    └── library/       Biblioteca de notas
+```
+
+Para cambiar los colores de toda la app, edita `seedColor` en
+`lib/core/theme/app_theme.dart`.
 
 ## Responsabilidades
 
@@ -21,4 +43,19 @@ Pendiente: el proyecto se generará con `flutter create` dentro de esta carpeta.
 
 ## Cómo ejecutarlo
 
-Pendiente.
+Requisitos: Flutter (canal stable) y un emulador o dispositivo Android.
+Comprueba tu instalación con `flutter doctor`.
+
+Desde esta carpeta (`app/`):
+
+```bash
+flutter pub get      # instala las dependencias
+flutter run          # ejecuta la app en el emulador o dispositivo conectado
+```
+
+Antes de abrir un PR:
+
+```bash
+flutter analyze      # análisis estático: debe decir "No issues found!"
+flutter test         # tests: deben pasar todos
+```

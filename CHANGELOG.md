@@ -8,7 +8,8 @@ y este proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 ## [Unreleased]
 
 ### Added
-
+- App: esqueleto Flutter con navegación (go_router), estado (Riverpod),
+  tema centralizado y test inicial (#1).
 - Estructura inicial del monorepo: `app/`, `backend/`, `contract/` y `docs/decisiones/`.
 - `README.md` raíz y un `README.md` por carpeta.
 - `.gitignore` para Flutter/Dart, Java (Gradle y Maven), IDEs, sistema operativo y secretos.
